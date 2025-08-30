@@ -1,3 +1,5 @@
+"use client"; 
+
 import React from "react";
 import {
   SignInButton,
@@ -11,7 +13,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-6 py-3 shadow-md h-16 bg-white">
+    <nav className="flex items-center justify-between px-6 py-3 shadow-md h-16 bg-white z-50 relative">
       {/* Logo */}
       <Link href="/" className="flex items-center">
         <Image
@@ -27,13 +29,13 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         <SignedOut>
           <SignInButton>
-            <button className="text-sm sm:text-base px-4 py-2 border rounded-full font-semibold hover:bg-gray-100 transition">
-              Sign In
+            <button className="text-sm sm:text-base px-4 py-2 border rounded-md font-semibold hover:bg-gray-100 transition">
+              Login
             </button>
           </SignInButton>
           <SignUpButton>
-            <button className="text-sm sm:text-base px-4 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition">
-              Sign Up
+            <button className="text-sm sm:text-base px-4 py-2 bg-blue-500 text-white rounded-md font-semibold hover:bg-blue-600 transition">
+              Sign up
             </button>
           </SignUpButton>
         </SignedOut>
